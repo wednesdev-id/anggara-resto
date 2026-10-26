@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANGARA — Masakan Pusaka & Bara Api Pedalaman</title>
+  <meta name="description" content="ANGARA menghidangkan masakan pusaka dan kuliner bara api autentik dari pedalaman India. Reservasi meja Anda sekarang.">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ANGARA — Heritage Charcoal & Provincial Spice Table">
+  <meta property="og:description" content="Kuliner warisan bara api dan rempah pusaka dari pedalaman desa.">
+  <meta property="og:image" content="images/signature_crab_handi.jpg">
+
+  <!-- Fonts: Playfair Display & Cormorant Garamond for elegant menu/editorial, Plus Jakarta Sans for clean nav -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+</head>
+<body>
+
+  <!-- ================= 1. HEADER / NAVBAR ================= -->
+  <header class="site-header" id="header">
+    <div class="nav-container">
+      
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-nav-toggle" id="mobileMenuBtn" aria-label="Buka Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Left Navigation Links (Desktop) -->
+      <nav class="nav-left" id="navLeft">
+        <ul class="nav-list">
+          <li><a href="#reservations" class="nav-link" data-i18n="nav_reservations">RESERVATIONS</a></li>
+          <li><a href="#pdf-menus" class="nav-link" data-i18n="nav_menus">MENUS</a></li>
+          <li><a href="#press" class="nav-link" data-i18n="nav_press">PRESS / PRIVATE DINING</a></li>
+        </ul>
+      </nav>
+
+      <!-- Center Logo -->
+      <div class="nav-center">
+        <a href="#header" class="brand-logo" aria-label="ANGARA Beranda">
+          <div class="brand-logo-lockup">
+            <svg class="brand-crest" width="34" height="34" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Sacred Hearth Emblem -->
+              <circle cx="50" cy="50" r="46" stroke="url(#goldGrad)" stroke-width="2" stroke-dasharray="2 3"/>
+              <circle cx="50" cy="50" r="41" stroke="url(#goldGrad)" stroke-width="1" stroke-opacity="0.6"/>
+              <!-- Base Hearth Bowl -->
+              <path d="M26 62C26 73 36.7 82 50 82C63.3 82 74 73 74 62H26Z" fill="url(#hearthGrad)" stroke="url(#goldGrad)" stroke-width="1.5"/>
+              <!-- Sacred Flame / Agni -->
+              <path d="M50 18C50 18 64 36 64 52C64 61 57.7 67 50 67C42.3 67 36 61 36 52C36 36 50 18 50 18Z" fill="url(#flameGrad)"/>
+              <!-- Inner Flame Core -->
+              <path d="M50 34C50 34 57 44 57 53C57 58 53.9 61 50 61C46.1 61 43 58 43 53C43 44 50 34 50 34Z" fill="#FFF8E7"/>
+              <!-- Cardinal Sparks -->
+              <circle cx="50" cy="8" r="2.5" fill="#F8C355"/>
+              <circle cx="92" cy="50" r="2" fill="#F8C355"/>
+              <circle cx="8" cy="50" r="2" fill="#F8C355"/>
+              <circle cx="50" cy="92" r="2" fill="#F8C355"/>
+              <defs>
+                <linearGradient id="goldGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FCE5A4"/>
+                  <stop offset="0.5" stop-color="#E8A232"/>
+                  <stop offset="1" stop-color="#C27A17"/>
+                </linearGradient>
+                <linearGradient id="flameGrad" x1="50" y1="18" x2="50" y2="67" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFDD80"/>
+                  <stop offset="0.45" stop-color="#E85D2A"/>
+                  <stop offset="1" stop-color="#9C2310"/>
+                </linearGradient>
+                <linearGradient id="hearthGrad" x1="26" y1="62" x2="74" y2="82" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#361711"/>
+                  <stop offset="1" stop-color="#1A0A07"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="brand-text-stack">
+              <span class="logo-text">ANGARA</span>
+              <span class="logo-subtext">PROVINCIAL HEARTH &bull; JAKARTA</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Right Actions: Social Links & Language Switcher -->
+      <div class="nav-right">
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="mailto:reservations@angararestaurant.com" aria-label="Email">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+        <button id="langToggleBtn" class="lang-toggle-btn" title="Ganti Bahasa / Switch Language">
+          <span id="currentLangLabel">ID</span> / <span id="targetLangLabel">EN</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <button class="drawer-close" id="mobileDrawerClose" aria-label="Tutup">&times;</button>
+      <ul class="mobile-nav-list">
+        <li><a href="#story" class="mob-link" data-i18n="nav_story">TENTANG KAMI</a></li>
+        <li><a href="#pdf-menus" class="mob-link" data-i18n="nav_menus">BUKU MENU (PDF)</a></li>
+        <li><a href="#menu" class="mob-link" data-i18n="nav_full_menu">DAFTAR HIDANGAN</a></li>
+        <li><a href="#press" class="mob-link" data-i18n="nav_press">ULASAN & PRESS</a></li>
+        <li><a href="#reservations" class="mob-link" data-i18n="nav_reservations">RESERVASI MEJA</a></li>
+      </ul>
+      <div class="drawer-contact">
+        <p>Jl. Senopati No. 88, Kebayoran Baru<br>Jakarta Selatan / Lower East Side, NYC</p>
+        <p>reservations@angararestaurant.com</p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ================= 2. HERO FOOD IMAGE ================= -->
+    <section class="hero-image-section">
+      <div class="hero-image-container">
+        <!-- Prominent full-width hero food shot matching the iconic reference -->
+        <img 
+          src="images/signature_crab_handi.jpg" 
+          alt="Sajian Kepiting Bakau Lada Hitam Tellicherry di Mangkuk Batu" 
+          class="hero-food-img"
+          loading="eager"
+          fetchpriority="high"
+        >
+      </div>
+    </section>
+
+    <!-- ================= 3. ABOUT / STORY SECTION ================= -->
+    <section class="about-section" id="story">
+      <!-- Traditional Indian Folk Art / Mandala Corner Vector Accents -->
+      <div class="mandala-corner top-left" aria-hidden="true"></div>
+      <div class="mandala-corner bottom-right" aria-hidden="true"></div>
+
+      <div class="about-container">
+        <!-- Left: Text Narrative -->
+        <div class="about-text-col">
+          <p class="about-lead-quote" data-i18n="story_lead">
+            ANGARA menghidangkan kekayaan kuliner warisan api dan rempah pedalaman yang belum banyak diceritakan.
+          </p>
+          <p class="about-body-text" data-i18n="story_body">
+            Terlalu lama khazanah kuliner anak benua diseragamkan ke dalam kuah kental manis yang kehilangan jiwanya. Kami menolak anggapan tersebut. Dari perapian tanah liat di pedalaman Bihar, aroma minyak moster dingin Benggala, hingga bara arang pesisir Malabar, kami menghidangkan resep pusaka yang diwariskan turun-temurun—dimasak perlahan dalam kuali tanah liat dan anglo arang membara.
+          </p>
+          <p class="about-tagline-quote" data-i18n="story_tagline">
+            Karena cita rasa yang paling mendalam adalah kisah yang paling jarang diangkat ke permukaan.
+          </p>
+        </div>
+
+        <!-- Right: Founders Photo -->
+        <div class="about-image-col">
+          <div class="founders-img-box">
+            <img src="images/chefs_portrait.jpg" alt="Chef Vikramaditya Rathore & Arjun Sengupta" class="founders-img" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4. PDF MENUS SECTION ================= -->
+    <section class="pdf-menus-section" id="pdf-menus">
+      <div class="pdf-menus-container">
+        <h2 class="section-heading serif" data-i18n="heading_pdf_menus">PDF Menus</h2>
+        
+        <!-- Top Row: 2 Cards (Food & Beverages) -->
+        <div class="pdf-cards-row top-row">
+          <div class="pdf-card" onclick="openPdfModal('food')">
+            <div class="pdf-card-img-box">
+              <img src="images/food_menu_card.jpg" alt="Food Menu" loading="lazy">
+            </div>
+            <span class="pdf-card-label" data-i18n="label_food">FOOD</span>
+          </div>
+
+          <div class="pdf-card" onclick="openPdfModal('beverage')">
+            <div class="pdf-card-img-box">
+              <img src="images/beverage_menu_card.jpg" alt="Beverages Menu" loading="lazy">
+            </div>
+            <span class="pdf-card-label" data-i18n="label_beverage">BEVERAGES</span>
+          </div>
+        </div>
+
+        <!-- Bottom Row: 1 Card Centered (Private Dining) -->
+        <div class="pdf-cards-row bottom-row">
+          <div class="pdf-card" onclick="openPdfModal('private')">
+            <div class="pdf-card-img-box">
+              <img src="images/ambiance_interior_card.jpg" alt="Private Dining Menu" loading="lazy">
+            </div>
+            <span class="pdf-card-label" data-i18n="label_private_dining">PRIVATE DINING</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 5. FULL MENU SECTION ================= -->
+    <section class="menu-section" id="menu">
+      <div class="menu-container">
+        <h2 class="section-heading serif" data-i18n="heading_menu">Menu</h2>
+        <div class="menu-subheading-wrap">
+          <div class="menu-subheading" data-i18n="menu_subtitle">FOOD &nbsp;•&nbsp; LIMITED CAPACITY</div>
+        </div>
+        
+        <h3 class="menu-category-title" data-i18n="category_food">FOOD</h3>
+
+        <!-- 2-Column Restaurant Menu Layout -->
+        <div class="menu-columns-grid">
+          
+          <!-- Left Column -->
+          <div class="menu-column">
+            
+            <!-- Category: SNACKS & CHAAT -->
+            <div class="menu-subgroup">
+              <h4 class="menu-subgroup-title" data-i18n="sub_snacks">SNACKS & SMALL PLATES</h4>
+              
+              <div class="menu-item" onclick="openDishQuickView('dish-1')">
+                <div class="item-header">
+                  <span class="item-name" data-i18n="item1_name">Kolhapuri Charred Wild Prawns</span>
+                  <span class="item-price">165</span>
+                </div>
+                <p class="item-desc" data-i18n="item1_desc">Wild prawns seared on open coals with spicy green chili thecha, toasted coconut relish, and roasted garlic.</p>
+              </div>
+
+              <div class="menu-item" onclick="openDishQuickView('dish-2')">
+                <div class="item-header">
+                  <span class="item-name" data-i18n="item2_name">Smoked Beetroot & Goat Cheese Tikki</span>
+                  <span class="item-price">125</span>
+                </div>
+                <p class="item-desc" data-i18n="item2_desc">Crispy smoked beetroot patties stuffed with creamy goat cheese, tamarind coulis, and chilled saffron dahi.</p>
+              </div>
+
+              <div class="menu-item" onclick="openDishQuickView('dish-3')">
+                <div class="item-header">
+                  <span class="item-name" data-i18n="item3_name">Dahi Ragda Puri Crisp</span>
+                  <span class="item-price">95</span>
+                </div>
+                <p class="item-desc" data-i18n="item3_desc">Crisp semolina shells filled with warm spiced ragda yellow peas, sweet hung curd, pomegranates, and sev.</p>
+              </div>
+            </div>
+
+            <!-- Category: FROM THE ANGITHI (CHARCOAL) -->
+            <div class="menu-subgroup">
+              <h4 class="menu-subgroup-title" data-i18n="sub_angithi">FROM THE ANGITHI (CHARCOAL)</h4>
+              
+              <div class="menu-item" onclick="openDishQuickView('dish-5')">
+                <div class="item-header">
+                  <span class="item-name" data-i18n="item5_name">Pahadi Smoked Lamb Chops</span>
+                  <span class="item-price">285</span>
+                </div>
+                <p class="item-desc" data-i18n="item5_desc">Prime grass-fed lamb ribs grilled over hardwood coals infused with wild mountain herbs, mace, and cultured ghee.</p>
+              </div>
+
+              <div class="menu-item" onclick="openDishQuickView('dish-4')">
+                <div class="item-header">
+                  <span class="item-name" data-i18n="item4_name">Angara Murgh Mathania Tikka</span>
+                  <span class="item-price">175</span>
+                </div>
+                <p class="item-desc" data-i18n="item4_desc">Pasture chicken thighs steeped 24 hours in Mathania chilies, cold-pressed mustard oil, and hung curd, blistered in clay pit.</p>
+              </div>
+
+              <div class="menu-item" onclick="openDishQuickView('dish-6')">
+                <div class="item-header">
+                  <span class="item-name" data-i18n="item6_name">Tandoori Malai Paneer Skewers</span>
+                  <span class="item-price">155</span>
+                </div>
+                <p class="item-desc" data-i18n="item6_desc">Fresh farm paneer marinated in clotted cream, crushed green cardamom, toasted white peppercorns, and charred peppers.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column -->
+          <div class="menu-column">
+            
+            <!-- Category: DUM HANDI & SLOW POTS -->
+            <div class="menu-subgroup">
+              <h4 class="menu-subgroup-title" data-i18n="sub_handi">ROYAL DUM HANDI & SLOW BRAISES</h4>
+              
+              <div class="menu-item" onclick="openDishQuickView('dish-crab')">
+                <div class="item-header">
+                  <span class="item-name" data-i18n="item_crab_name">Tellicherry Black Pepper Mud Crab</span>
+                  <span class="item-price">385</span>
+                </div>
+                <p class="item-desc" data-i18n="item_crab_desc">Mangrove crab braised in stone-ground coconut milk, cracked Tellicherry black pepper, sizzled curry leaves, and charred lime.</p>
+              </div>
+
+              <div class="menu-item" onclick="openDishQuickView('dish-7')">
+                <div class="item-header">
+                  <span class="item-name" data-i18n="item7_name">Royal Awadhi Dum Gosht Biryani</span>
+                  <span class="item-price">260</span>
+                </div>
+                <p class="item-desc" data-i18n="item7_desc">Aged basmati and tender baby mutton slow-braised for 14 hours in sealed handi with royal saffron and smoked mint raita.</p>
+              </div>
+
+              <div class="menu-item" onclick="openDishQuickView('dish-8')">
+                <div class="item-header">
+                  <span class="item-name" data-i18n="item8_name">Champaran Ahuna Earthen Pot Mutton</span>
+                  <span class="item-price">245</span>
+                </div>
+                <p class="item-desc" data-i18n="item8_desc">Heirloom Bihari village recipe: mutton, whole charred garlic bulbs, raw mustard oil, and coriander in sealed earthen pot.</p>
+              </div>
+
+              <div class="menu-item" onclick="openDishQuickView('dish-9')">
+                <div class="item-header">
+                  <span class="item-name" data-i18n="item9_name">Dal Angara Smoked Charcoal Ghee</span>
+                  <span class="item-price">135</span>
+                </div>
+                <p class="item-desc" data-i18n="item9_desc">Black urad lentils slow-simmered for 24 hours with vine tomatoes, cultured butter, and infused with smoldering dhungar smoke.</p>
+              </div>
+            </div>
+
+            <!-- Category: ARTISANAL BREADS & RICE -->
+            <div class="menu-subgroup">
+              <h4 class="menu-subgroup-title" data-i18n="sub_breads">ARTISANAL BREADS & RICE</h4>
+              
+              <div class="menu-item" onclick="openDishQuickView('dish-10')">
+                <div class="item-header">
+                  <span class="item-name" data-i18n="item10_name">Truffle & Confit Garlic Naan</span>
+                  <span class="item-price">65</span>
+                </div>
+                <p class="item-desc" data-i18n="item10_desc">Wild-fermented sourdough naan baked on clay walls, brushed with roasted confit garlic and black truffle oil.</p>
+              </div>
+
+              <div class="menu-item" onclick="openDishQuickView('dish-11')">
+                <div class="item-header">
+                  <span class="item-name" data-i18n="item11_name">Kashmiri Sheermal Saffron Flatbread</span>
+                  <span class="item-price">70</span>
+                </div>
+                <p class="item-desc" data-i18n="item11_desc">Warm milk-kneaded festive flatbread brushed with pure saffron infusion and wild orange blossom essence.</p>
+              </div>
+
+              <div class="menu-item" onclick="openDishQuickView('dish-rice')">
+                <div class="item-header">
+                  <span class="item-name" data-i18n="item_rice_name">Aged Saffron Basmati Rice</span>
+                  <span class="item-price">55</span>
+                </div>
+                <p class="item-desc" data-i18n="item_rice_desc">Steamed long-grain basmati with whole green cardamom, cloves, and golden saffron butter.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 6. REVIEWS & PRESS (WHITE BACKGROUND SECTION) ================= -->
+    <section class="press-section" id="press">
+      <div class="press-container">
+        <h2 class="press-heading serif" data-i18n="heading_press">Reviews & Press</h2>
+        
+        <div class="press-grid">
+          
+          <!-- 1. The New York Times -->
+          <div class="press-item">
+            <div class="press-logo-box">
+              <span class="logo-nyt">The New York Times</span>
+            </div>
+            <div class="press-date" data-i18n="press1_date">CRITIC'S PICK • 2025</div>
+            <p class="press-quote" data-i18n="press1_quote">"Salah satu santap malam paling berani, menggugah selera, dan sarat kejujuran rasa yang pernah hadir dalam kancah gastronomi kota."</p>
+          </div>
+
+          <!-- 2. Esquire -->
+          <div class="press-item">
+            <div class="press-logo-box">
+              <span class="logo-esquire">Esquire</span>
+            </div>
+            <div class="press-date" data-i18n="press2_date">BEST NEW RESTAURANTS IN AMERICA</div>
+            <p class="press-quote" data-i18n="press2_quote">"Sebuah perayaan rempah dan bara api yang tak terbantahkan. Menikmati masakan kuali tanah liat di sini adalah pengalaman magis."</p>
+          </div>
+
+          <!-- 3. The New York Times (Feature) -->
+          <div class="press-item">
+            <div class="press-logo-box">
+              <span class="logo-nyt">The New York Times</span>
+            </div>
+            <div class="press-date" data-i18n="press3_date">PETE WELLS' TOP 10 DISHES</div>
+            <p class="press-quote" data-i18n="press3_quote">"Kepiting lada hitam Tellicherry dan biryani 14 jam dari Angara akan mereset cara pandang Anda terhadap keagungan masakan pedalaman."</p>
+          </div>
+
+          <!-- 4. Eater -->
+          <div class="press-item">
+            <div class="press-logo-box">
+              <span class="logo-eater">EATER</span>
+            </div>
+            <div class="press-date" data-i18n="press4_date">STANDOUT RESTAURANT OF THE YEAR</div>
+            <p class="press-quote" data-i18n="press4_quote">"Mendobrak batas kenyamanan kuliner umum dengan hidangan yang sarat karakter, membakar rasa penasaran di setiap gigitan."</p>
+          </div>
+
+          <!-- 5. Time Out -->
+          <div class="press-item">
+            <div class="press-logo-box">
+              <span class="logo-timeout">Time Out</span>
+            </div>
+            <div class="press-date" data-i18n="press5_date">★★★★★ MUST VISIT</div>
+            <p class="press-quote" data-i18n="press5_quote">"Atmosfer yang hidup, harum asap kayu manis, dan sate iga kambing bakar arang terenak yang ada di kota."</p>
+          </div>
+
+          <!-- 6. New York Magazine -->
+          <div class="press-item">
+            <div class="press-logo-box">
+              <span class="logo-nymag">New York</span>
+            </div>
+            <div class="press-date" data-i18n="press6_date">THE ABSOLUTE BEST OF NYC</div>
+            <p class="press-quote" data-i18n="press6_quote">"Tanpa kepura-puraan. Murni penghormatan kepada tradisi dapur desa yang hampir terlupakan zaman."</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 7. MAKE A RESERVATION SECTION ================= -->
+    <section class="reservation-section" id="reservations">
+      <div class="res-container">
+        <h2 class="section-heading serif" data-i18n="heading_make_res">Make a Reservation</h2>
+        
+        <div class="res-instructions">
+          <p data-i18n="res_p1">Reservations for parties of 1 to 6 guests are available 30 days in advance via our online booking engine.</p>
+          <p data-i18n="res_p2">For private dining room buyouts or large parties of 7 or more guests, please contact our events team at dining@angararestaurant.com.</p>
+          <p data-i18n="res_p3">Please note our cancellation policy: cancellations made within 24 hours of the reserved seating time are subject to a nominal fee.</p>
+        </div>
+
+        <div class="res-button-wrapper">
+          <button class="pill-btn-outline" id="resModalOpenBtn" data-i18n="btn_reserve_pill">
+            RESERVE A TABLE
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 8. FOOTER SECTION ================= -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        
+        <!-- Buy Gift Card Action -->
+        <div class="gift-card-action">
+          <button class="pill-btn-outline sm" id="giftCardBtn" data-i18n="btn_gift_card">
+            BUY A GIFT CARD
+          </button>
+        </div>
+
+        <!-- 2-Column Info Block -->
+        <div class="footer-info-grid">
+          
+          <!-- Column 1: Location & Hours -->
+          <div class="footer-col">
+            <p class="info-line strong">ANGARA CULINARY HEARTH</p>
+            <p class="info-line">Jl. Senopati Raya No. 88, Kebayoran Baru</p>
+            <p class="info-line">Jakarta Selatan 12190 / Essex St, New York</p>
+            <p class="info-line italic" data-i18n="footer_dinein">Dine-in & Curbside Pickup</p>
+            <div class="hours-block">
+              <p class="info-line" data-i18n="footer_hours1">Tuesday – Sunday: 5:00pm – 10:30pm</p>
+              <p class="info-line" data-i18n="footer_hours2">Closed on Mondays</p>
+            </div>
+          </div>
+
+          <!-- Column 2: Inquiries & Social -->
+          <div class="footer-col right-aligned">
+            <p class="info-line strong" data-i18n="footer_inquiries">General & Press Inquiries</p>
+            <p class="info-line"><a href="mailto:dining@angararestaurant.com">dining@angararestaurant.com</a></p>
+            <p class="info-line"><a href="tel:+622155908820">+62 21 5590 8820 / +1 (212) 555-0198</a></p>
+            
+            <div class="footer-social-icons">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              </a>
+              <a href="mailto:dining@angararestaurant.com" aria-label="Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sister Concepts & Hospitality Group -->
+        <div class="footer-group-block">
+          <p class="group-credit" data-i18n="footer_group">
+            Part of Heritage Hearth Hospitality Group<br>
+            Explore our sister tables: Masala Kothi • Malabar Club • Saffron House
+          </p>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright-block">
+          <p data-i18n="footer_copy">Copyright © 2025–2026 ANGARA. All Rights Reserved.</p>
+        </div>
+
+      </div>
+    </footer>
+  </main>
+
+  <!-- ================= FLOATING EXPERIENCE BAR (PORTFOLIO POLISH) ================= -->
+  <aside class="floating-booking-bar" id="floatingBar" aria-label="Quick Booking Status">
+    <div class="floating-content">
+      <div class="floating-status">
+        <span class="status-pulse-dot" aria-hidden="true"></span>
+        <span class="status-text" data-i18n="float_status">Buka Malam Ini: 17.00 – 22.30</span>
+      </div>
+      <div class="floating-cta">
+        <button class="floating-btn" id="floatingBookBtn" data-i18n="float_book_btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/></svg>
+          Reservasi Meja
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= INTERACTIVE MODALS ================= -->
+
+  <!-- 1. RESY-STYLE RESERVATION MODAL -->
+  <div class="modal-overlay" id="reserveModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" id="closeReserveModal">&times;</button>
+      <div class="modal-top">
+        <span class="modal-kicker">ANGARA TABLE BOOKINGS</span>
+        <h3 class="modal-head serif" data-i18n="res_modal_head">Book a Table</h3>
+        <p class="modal-desc" data-i18n="res_modal_desc">Instant live confirmation for dining at Angara.</p>
+      </div>
+
+      <form id="resForm" class="modal-booking-form">
+        <div class="form-grid">
+          <div class="form-field">
+            <label data-i18n="field_guests">Party Size</label>
+            <select id="partySize" class="select-field">
+              <option value="1">1 Guest</option>
+              <option value="2" selected>2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="5">5 Guests</option>
+              <option value="6">6 Guests</option>
+              <option value="7+">7+ Large Party (Events)</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label data-i18n="field_date">Date</label>
+            <input type="date" id="resDate" class="input-field" required>
+          </div>
+
+          <div class="form-field">
+            <label data-i18n="field_time">Seating Time</label>
+            <select id="resTime" class="select-field">
+              <option value="17:30">5:30 PM</option>
+              <option value="18:15">6:15 PM</option>
+              <option value="19:00" selected>7:00 PM (Prime)</option>
+              <option value="19:45">7:45 PM</option>
+              <option value="20:30">8:30 PM</option>
+              <option value="21:15">9:15 PM</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label data-i18n="field_name">Full Name *</label>
+            <input type="text" id="guestName" class="input-field" placeholder="e.g. Budi Santoso / James Carter" required>
+          </div>
+
+          <div class="form-field">
+            <label data-i18n="field_phone">Phone / WhatsApp *</label>
+            <input type="tel" id="guestPhone" class="input-field" placeholder="+62 812-xxxx-xxxx" required>
+          </div>
+
+          <div class="form-field">
+            <label data-i18n="field_email">Email *</label>
+            <input type="email" id="guestEmail" class="input-field" placeholder="email@address.com" required>
+          </div>
+        </div>
+
+        <div class="form-field full-width">
+          <label data-i18n="field_notes">Special Dietary Requirements / Seating Requests</label>
+          <textarea id="guestNotes" class="textarea-field" rows="2" placeholder="e.g. Nut allergy, celebrating an anniversary..."></textarea>
+        </div>
+
+        <button type="submit" class="pill-btn-solid" data-i18n="btn_confirm_res">CONFIRM RESERVATION</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. RESERVATION CONFIRMATION TICKET MODAL -->
+  <div class="modal-overlay" id="ticketModal" aria-hidden="true">
+    <div class="modal-box text-center">
+      <div class="ticket-check">✓</div>
+      <h3 class="modal-head serif" data-i18n="ticket_head">Reservation Confirmed!</h3>
+      <p class="modal-desc" data-i18n="ticket_desc">We look forward to hosting you at Angara.</p>
+      
+      <div class="ticket-card">
+        <div class="ticket-row">
+          <span>BOOKING ID</span>
+          <strong id="ticketCode">#ANG-28912</strong>
+        </div>
+        <div class="ticket-row">
+          <span>GUEST</span>
+          <strong id="ticketGuest">-</strong>
+        </div>
+        <div class="ticket-row">
+          <span>PARTY & TIME</span>
+          <strong id="ticketDetails">-</strong>
+        </div>
+      </div>
+
+      <p class="ticket-disclaimer" data-i18n="ticket_note">A confirmation copy has been sent to your WhatsApp and Email.</p>
+      <button class="pill-btn-solid" id="closeTicketBtn" data-i18n="btn_done">DONE</button>
+    </div>
+  </div>
+
+  <!-- 3. PDF MENU VIEWER MODAL -->
+  <div class="modal-overlay" id="pdfModal" aria-hidden="true">
+    <div class="modal-box modal-lg">
+      <button class="modal-close" id="closePdfModal">&times;</button>
+      <div class="pdf-modal-header text-center">
+        <span class="modal-kicker">ANGARA PRINT ARCHIVES</span>
+        <h3 class="modal-head serif" id="pdfViewerTitle">Food Menu</h3>
+      </div>
+      <div class="pdf-modal-body" id="pdfViewerBody">
+        <!-- Injected via app.js -->
+      </div>
+      <div class="pdf-modal-footer">
+        <button class="pill-btn-outline sm" id="simPdfDownloadBtn">DOWNLOAD PDF 📥</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. DISH QUICK VIEW MODAL -->
+  <div class="modal-overlay" id="dishModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" id="closeDishModal">&times;</button>
+      <div class="dish-quick-content">
+        <div class="dish-quick-img-wrap">
+          <img id="dishQuickImg" src="" alt="Dish">
+        </div>
+        <h3 class="dish-quick-name serif" id="dishQuickName">Dish Name</h3>
+        <p class="dish-quick-region" id="dishQuickRegion">Region</p>
+        <p class="dish-quick-desc" id="dishQuickDesc">Description</p>
+        <p class="dish-quick-ingredients" id="dishQuickIngredients">Ingredients</p>
+        <div class="dish-quick-footer">
+          <span class="dish-quick-price serif" id="dishQuickPrice">165</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
